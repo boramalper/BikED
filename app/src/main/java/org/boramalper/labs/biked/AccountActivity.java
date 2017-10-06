@@ -1,6 +1,5 @@
 package org.boramalper.labs.biked;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,12 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class AccountActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rent);
 
         ((BottomNavigationView) findViewById(R.id.bottomNavigation)).setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -24,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if (item.getTitle().equals("Rent")) {
                     proceedTo(RentActivity.class, true);
-                } else if (item.getTitle().equals("Account")) {
-                    proceedTo(AccountActivity.class, true);
+                } else if (item.getTitle().equals("Explore")) {
+                    proceedTo(MainActivity.class, true);
                 }
 
                 return true;

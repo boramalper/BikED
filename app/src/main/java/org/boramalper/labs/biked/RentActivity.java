@@ -24,7 +24,7 @@ public class RentActivity extends AppCompatActivity {
                 if (item.getTitle().equals("Explore")) {
                     proceedTo(MainActivity.class, true);
                 } else if (item.getTitle().equals("Account")) {
-                    ; // TODO empty
+                    proceedTo(AccountActivity.class, true);
                 }
 
                 return true;
