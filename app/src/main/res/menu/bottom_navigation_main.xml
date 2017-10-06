@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- TUTORIAL https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- BEWARE: We use title in Activities to identify which button is clicked! -->
     <item android:id="@+id/action_search"
         android:title="Rent"
         android:icon="@drawable/ic_payment_black_24dp" />
