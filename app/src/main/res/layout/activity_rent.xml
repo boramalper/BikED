@@ -6,29 +6,17 @@
     android:layout_height="match_parent">
 
     <!-- Content Container -->
-
-    <!-- THIS IS HOW ITS OUGHT TO BE
-
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="#FFFFFF"
         app:itemTextColor="#FFFFFF"
         app:menu="@menu/bottom_navigation_main"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-     -->
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="#FFFFFF"
-        app:itemTextColor="#FFFFFF"
-        app:menu="@menu/bottom_navigation_main"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"/>
 
     <TextView
         android:id="@+id/textView2"
