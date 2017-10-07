@@ -12,6 +12,10 @@ import android.widget.ImageView;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import com.yarolegovich.discretescrollview.DiscreteScrollView;
+import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
+import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageView image;
@@ -28,8 +32,61 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Route[] routes = {
+                new Route(
+                    "Botanic Gardens & Royal Yacht Britannia",
+                    "Botanic Gardens\n&\nRoyal Yacht Britannia",
+                    "Easy",
+                    15f,
+                    (new String[] {"Historic", "Sea", "Green"}),
+                    "Start your trip and cycle to the Royal Botanic Gardens. Take a stroll around before heading to Ocean Terminal along the waters of Leith. You’ll arrive at The Royal Yacht Britannia, one of Scotland’s best visitor attractions. Your trip further takes you to the Centre of Leith, along Leith Links and Carlton Hill and back into the city Centre."
+                ),
+                new Route(
+                    "Portobello Beach & Holyrood Park",
+                    "Portobello Beach\n&\nHolyrood Park",
+                    "Intermediate",
+                    15.4f,
+                    (new String[] {"Beach", "Green", "Tunnel"}),
+                    "Pick up a bike and head East towards the coast. Your passing the parliament, the northern side of Holyrood Park and find yourself in Portobello Beach which is perfect to spend a few hours by the sea not far from the city centre of Edinburgh. Cycle along the nice promenade and enjoy a coffee in a beachside café. The way back brings you again to Holyrood Park, and through the old railway tunnel."
+                ),
+                new Route(
+                    "Blackford Hill & the Meadows",
+                    "Blackford Hill\n&\nthe Meadows",
+                    "Intermediate",
+                    12.7f,
+                    (new String[] {"Green", "Historic", "Nature"}),
+                    ""
+                ),
+                new Route(
+                    "Inverleith Park & Stockbridge",
+                    "Inverleith Park\n&\nStockbridge",
+                    "Easy",
+                    11.5f,
+                    (new String[] {"Green", "Food", "Drinks"}),
+                    ""
+                ),
+                new Route(
+                    "Crammond Island",
+                    "Crammond Island",
+                    "Easy",
+                    20.5f,
+                    (new String[] {"Sea", "Island", "Historic"}),
+                    ""
+                )
+        };
+
+        // <BORA ADDED THIS>
+        DiscreteScrollView discreteScrollView = (DiscreteScrollView) findViewById(R.id.discreteScrollView);
+        // TODO: discreteScrollView.addOnItemChangedListener();
+        discreteScrollView.setAdapter(InfiniteScrollAdapter.wrap(new RoutesAdapter(routes)));
+        discreteScrollView.setItemTransitionTimeMillis(200);
+        discreteScrollView.setItemTransformer(new ScaleTransformer.Builder().setMinScale(0.8f).build());
+
+        // </BORA ADDED THIS>
+
         image = (ImageView)findViewById(R.id.imageView1);
 
+        /*
         button1= (TextView) findViewById(R.id.route1Text);
         button1.setOnClickListener(button1Listener);
 
@@ -44,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         button5= (TextView) findViewById(R.id.route5Text);
         button5.setOnClickListener(button5Listener);
+        */
 
         BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         bottomNavigation.setSelectedItemId(R.id.action_explore);
