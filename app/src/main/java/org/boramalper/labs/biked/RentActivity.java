@@ -1,6 +1,5 @@
 package org.boramalper.labs.biked;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,15 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class RentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rent);
 
         BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
-        bottomNavigation.setSelectedItemId(R.id.action_explore);
+        bottomNavigation.setSelectedItemId(R.id.action_rent);
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -24,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
                 // One possibility of action is to replace the contents above the nav bar
                 // return true if you want the item to be displayed as the selected item
 
-                if (item.getTitle().equals("Rent")) {
-                    proceedTo(RentActivity.class, true);
+                if (item.getTitle().equals("Explore")) {
+                    proceedTo(MainActivity.class, true);
                 } else if (item.getTitle().equals("Account")) {
                     proceedTo(AccountActivity.class, true);
                 }
