@@ -1,26 +1,37 @@
 package org.boramalper.labs.biked;
 
-import android.app.DatePickerDialog;
 import android.content.Intent;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-import java.util.Scanner;
 
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.DatePicker;
-import android.widget.EditText;
+
 
 public class RentActivity extends AppCompatActivity {
+    // private List<BikeRental> bikeRentals = new LinkedList<>();
+    private BikeRental[] bikeRentals = {
+        // 8 min -- 650 m
+        new BikeRental("Biketrax",             "11 - 13 Lochrin Place",         "EH3 9QX",  "+44 131 228 6633", "info@biketrax.co.uk",        "https://www.biketrax.co.uk/info/bike_hire.php"),
+
+        // 15 min -- 1.2 km
+        new BikeRental("Cycle Scotland",       "29 Blackfriars St",             "EH1 1NB",  "+44 131 556 5560", null,                         "https://www.cyclescotland.co.uk"),
+
+        // 25 min -- 2.1 km
+        new BikeRental("Grease Monkey Cycles", "9C Craigmillar Castle Gardens", "EH16 4BP", "+44 758 846 1452", null,                         "http://greasemonkeycycles.com/"),
+
+        // 37 min -- 3km
+        new BikeRental("Leith Cycle CO",       "276 Leith Walk",                "EH6 5BX",  "+44 131 467 7775", "leith@leithcycleco.com",     "http://www.leithcycleco.com/hire"),
+
+        // 56 min -- 4.6 km
+        new BikeRental("Pedal Forth",          "17 East Cromwell St, Leith",    "EH6 6HD",  "+44 131 554 9990", null,                         "http://www.pedalforth.co.uk/?page_id=809"),
+
+        // 1hr 10 min -- 5.6 km
+        new BikeRental("Hart’s Cyclery",       "249A St. John's Road",          "EH12 7XD", "+44 131 334 1441", "graeme@harts-cyclery.co.uk", "http://www.harts-cyclery.co.uk/index.html"),
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,79 +57,10 @@ public class RentActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.buttonCall).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonBookNowCycleScotland).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:+441315565560"));
-                startActivity(intent);
-            }
-        });
-
-        findViewById(R.id.editTextDateFrom).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final EditText editTextDateFrom = (EditText) findViewById(R.id.editTextDateFrom);
-                String dateString = editTextDateFrom.getText().toString();
-                // TODO: Adjust according to today
-                int year = 2017, month = 10 - 1, day = 8;
-                if (dateString.length() == 10) {
-                    Scanner scanner = new Scanner(dateString);
-                    scanner.useDelimiter("-");
-                    year = scanner.nextInt();
-                    month = scanner.nextInt() - 1;
-                    day = scanner.nextInt();
-                }
-
-                new DatePickerDialog(
-                        v.getContext(),
-                        new DatePickerDialog.OnDateSetListener() {
-                            @Override
-                            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                                editTextDateFrom.setText(String.format(Locale.US, "%4d-%02d-%02d", year, month + 1, dayOfMonth));
-                            }
-                        },
-                        year,
-                        month,
-                        day
-                ).show();
-            }
-        });
-
-        findViewById(R.id.editTextDateTo).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final EditText editTextDateTo = (EditText) findViewById(R.id.editTextDateTo);
-                String dateString = editTextDateTo.getText().toString();
-                // TODO: Adjust according to today
-                int year = 2017, month = 10 - 1, day = 8;
-                if (dateString.length() == 10) {
-                    Scanner scanner = new Scanner(dateString);
-                    scanner.useDelimiter("-");
-                    year = scanner.nextInt();
-                    month = scanner.nextInt() - 1;
-                    day = scanner.nextInt();
-                }
-
-                new DatePickerDialog(
-                        v.getContext(),
-                        new DatePickerDialog.OnDateSetListener() {
-                            @Override
-                            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                                editTextDateTo.setText(String.format(Locale.US, "%4d-%02d-%02d", year, month + 1, dayOfMonth));
-                            }
-                        },
-                        year,
-                        month,
-                        day
-                ).show();
-            }
-        });
-
-        findViewById(R.id.buttonSearch).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                proceedTo(RentSearchResultsActivity.class, false);
+                proceedTo(ReservationActivity.class, false);
             }
         });
     }

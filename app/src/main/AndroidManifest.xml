@@ -21,7 +21,6 @@
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -46,7 +45,8 @@
             android:label="@string/title_activity_login" />
         <activity android:name=".RentActivity" />
         <activity android:name=".AccountActivity" />
-        <activity android:name=".RentSearchResultsActivity"></activity>
+        <activity android:name=".ReservationActivity"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>
