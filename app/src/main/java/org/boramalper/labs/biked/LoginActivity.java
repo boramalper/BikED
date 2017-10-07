@@ -8,6 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override

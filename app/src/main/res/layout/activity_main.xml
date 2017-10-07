@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <!-- Content Container -->
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -20,7 +21,7 @@
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bottom_navigation"
+        android:layout_above="@+id/bottomNavigation"
         android:layout_alignParentStart="true">
         <LinearLayout
             android:id="@+id/innerLay"
@@ -35,21 +36,23 @@
                 android:gravity="bottom"
                 android:orientation="vertical" >
 
-                <RelativeLayout
+                <FrameLayout
                     android:layout_width="200dp"
                     android:layout_height="200dp">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bike" />
-
                     <TextView
-                        android:layout_width="0.2dp"
+                        android:id="@+id/route1Text"
+                        android:layout_width="match_parent"
                         android:layout_height="fill_parent"
                         android:layout_alignParentEnd="true"
-                        android:background="@drawable/bike" />
-                </RelativeLayout>
+                        android:background="@android:color/holo_green_light"
+                        android:clickable="true"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="30sp"
+                        android:visibility="visible"
+                        tools:clickable="true"
+                        tools:text="Route 1" />
+                </FrameLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/bike2"
@@ -58,21 +61,22 @@
                 android:gravity="bottom"
                 android:orientation="vertical" >
 
-                <RelativeLayout
+                <FrameLayout
                     android:layout_width="200dp"
                     android:layout_height="200dp">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bike" />
-
                     <TextView
-                        android:layout_width="0.2dp"
+                        android:id="@+id/route2Text"
+                        android:layout_width="match_parent"
                         android:layout_height="fill_parent"
                         android:layout_alignParentEnd="true"
-                        android:background="@drawable/bike" />
-                </RelativeLayout>
+                        android:background="@android:color/holo_purple"
+                        android:clickable="true"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="30sp"
+                        android:visibility="visible"
+                        tools:text="Route 2" />
+                </FrameLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/bike3"
@@ -81,21 +85,22 @@
                 android:gravity="bottom"
                 android:orientation="vertical" >
 
-                <RelativeLayout
+                <FrameLayout
                     android:layout_width="200dp"
                     android:layout_height="200dp">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bike" />
-
                     <TextView
-                        android:layout_width="0.2dp"
+                        android:id="@+id/route3Text"
+                        android:layout_width="match_parent"
                         android:layout_height="fill_parent"
                         android:layout_alignParentEnd="true"
-                        android:background="@drawable/bike" />
-                </RelativeLayout>
+                        android:background="?android:attr/colorMultiSelectHighlight"
+                        android:clickable="true"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="30sp"
+                        android:visibility="visible"
+                        tools:text="Route 3" />
+                </FrameLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/bike4"
@@ -104,21 +109,22 @@
                 android:gravity="bottom"
                 android:orientation="vertical" >
 
-                <RelativeLayout
+                <FrameLayout
                     android:layout_width="200dp"
                     android:layout_height="200dp">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bike" />
-
                     <TextView
-                        android:layout_width="0.2dp"
+                        android:id="@+id/route4Text"
+                        android:layout_width="match_parent"
                         android:layout_height="fill_parent"
                         android:layout_alignParentEnd="true"
-                        android:background="@drawable/bike" />
-                </RelativeLayout>
+                        android:background="@android:color/holo_red_light"
+                        android:clickable="true"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="30sp"
+                        android:visibility="visible"
+                        tools:text="Route 4" />
+                </FrameLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/bike5"
@@ -127,79 +133,35 @@
                 android:gravity="bottom"
                 android:orientation="vertical" >
 
-                <RelativeLayout
+                <FrameLayout
                     android:layout_width="200dp"
                     android:layout_height="200dp">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bike" />
-
                     <TextView
-                        android:layout_width="0.2dp"
+                        android:id="@+id/route5Text"
+                        android:layout_width="match_parent"
                         android:layout_height="fill_parent"
                         android:layout_alignParentEnd="true"
-                        android:background="@drawable/bike" />
-                </RelativeLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/bike6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="bottom"
-                android:orientation="vertical" >
-
-                <RelativeLayout
-                    android:layout_width="200dp"
-                    android:layout_height="200dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bike" />
-
-                    <TextView
-                        android:layout_width="0.2dp"
-                        android:layout_height="fill_parent"
-                        android:layout_alignParentEnd="true"
-                        android:background="@drawable/bike" />
-                </RelativeLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/bike"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="bottom"
-                android:orientation="vertical" >
-
-                <RelativeLayout
-                    android:layout_width="200dp"
-                    android:layout_height="200dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bike" />
-
-                    <TextView
-                        android:layout_width="0.2dp"
-                        android:layout_height="fill_parent"
-                        android:layout_alignParentEnd="true"
-                        android:background="@drawable/bike" />
-                </RelativeLayout>
+                        android:background="?attr/actionModeSplitBackground"
+                        android:clickable="true"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textSize="30sp"
+                        android:visibility="visible"
+                        tools:text="Route 5" />
+                </FrameLayout>
             </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/edinburghmap"
-        android:layout_marginBottom="204dp"
         android:layout_alignBottom="@+id/horizontalScrollView"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="204dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/route1" />
 
 </RelativeLayout>
 

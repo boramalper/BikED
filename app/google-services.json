@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "373469816858",
+    "firebase_url": "https://biked-e0c97.firebaseio.com",
+    "project_id": "biked-e0c97",
+    "storage_bucket": "biked-e0c97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373469816858:android:39daaaa68569adf8",
+        "android_client_info": {
+          "package_name": "org.boramalper.labs.biked"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373469816858-pvk4ngdctb7njesh0jo116sppdq11n8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1KCfGkWn23lHR7KLU7gfwwxnzzxiisnI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
