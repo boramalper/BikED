@@ -26,7 +26,7 @@ public class WelcomePoint3Activity extends AppCompatActivity {
     }
 
     private void proceed() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }
