@@ -2,6 +2,7 @@ package org.boramalper.labs.biked;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 new Route(
                     "Botanic Gardens & Royal Yacht Britannia",
                     "Botanic Gardens\n&\nRoyal Yacht Britannia",
+                    Color.parseColor("#e41a1c"),
                     "Easy",
                     15f,
                     (new String[] {"Historic", "Sea", "Green"}),
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 new Route(
                     "Portobello Beach & Holyrood Park",
                     "Portobello Beach\n&\nHolyrood Park",
+                    Color.parseColor("#377eb7"),
                     "Intermediate",
                     15.4f,
                     (new String[] {"Beach", "Green", "Tunnel"}),
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 new Route(
                     "Blackford Hill & the Meadows",
                     "Blackford Hill\n&\nthe Meadows",
+                    Color.parseColor("#4daf4a"),
                     "Intermediate",
                     12.7f,
                     (new String[] {"Green", "Historic", "Nature"}),
@@ -60,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 new Route(
                     "Inverleith Park & Stockbridge",
                     "Inverleith Park\n&\nStockbridge",
+                    Color.parseColor("#9a4ea3"),
                     "Easy",
                     11.5f,
                     (new String[] {"Green", "Food", "Drinks"}),
@@ -67,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 ),
                 new Route(
                     "Crammond Island",
-                    "Crammond Island",
+                    "\nCrammond Island\n",
+                    Color.parseColor("#ff7f00"),
                     "Easy",
                     20.5f,
                     (new String[] {"Sea", "Island", "Historic"}),

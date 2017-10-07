@@ -1,15 +1,12 @@
 package org.boramalper.labs.biked;
 
-import android.graphics.Color;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import java.util.List;
 import java.util.Locale;
 
 /**
@@ -33,8 +30,14 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         ((TextView) holder.itemView.findViewById(R.id.textViewTitle)).setText(routes[position].title);
+        holder.itemView.findViewById(R.id.textViewTitle).setBackgroundColor(routes[position].titleColor);
+
         ((TextView) holder.itemView.findViewById(R.id.textViewLevel)).setText(routes[position].level);
-        ((TextView) holder.itemView.findViewById(R.id.textViewLength)).setText(String.format(Locale.US, "%.1f", routes[position].length));
+        ((TextView) holder.itemView.findViewById(R.id.textViewLength)).setText(String.format(Locale.US, "%.1f km", routes[position].length));
+
+        ((TextView) holder.itemView.findViewById(R.id.textViewTag1)).setText(routes[position].tags[0]);
+        ((TextView) holder.itemView.findViewById(R.id.textViewTag2)).setText(routes[position].tags[1]);
+        ((TextView) holder.itemView.findViewById(R.id.textViewTag3)).setText(routes[position].tags[2]);
     }
 
     @Override
@@ -43,15 +46,11 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.ViewHolder
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private FrameLayout frameLayout;
+        private CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            frameLayout = itemView.findViewById(R.id.frameLayout);
-        }
-
-        public FrameLayout getFrameLayout() {
-            return frameLayout;
+            cardView = itemView.findViewById(R.id.cardView);
         }
     }
 }
