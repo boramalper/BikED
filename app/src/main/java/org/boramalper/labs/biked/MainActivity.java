@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -120,20 +119,17 @@ public class MainActivity extends AppCompatActivity {
                     routePortobelloHolyrood.kmlLayer = new KmlLayer(googleMap, R.raw.portobello_holyrood, getApplicationContext());
                     routeInverleithStockbridge.kmlLayer = new KmlLayer(googleMap, R.raw.inverleith_stockbridge, getApplicationContext());
                     routeCrammond.kmlLayer = new KmlLayer(googleMap, R.raw.crammond, getApplicationContext());
-
-                    try {
-                        Thread.sleep(1000);
-                    } catch (java.lang.InterruptedException exc) {
-                        /* IGNORE */
-                    }
-
-
-                    CameraUpdate camUpdate = CameraUpdateFactory.newLatLngBounds(new LatLngBounds(new LatLng(55.919581, -3.314071), new LatLng(55.992527, -3.097852)), 0);
-                    googleMap.moveCamera(camUpdate);
                 } catch (org.xmlpull.v1.XmlPullParserException | java.io.IOException exc) {
                     /* IGNORE */
                 }
-                Log.w("BIKED", "ALL KML READY!\n");
+
+                try {
+                    Thread.sleep(1000);
+                } catch (java.lang.InterruptedException exc) {
+                        /* IGNORE */
+                }
+
+                googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(new LatLngBounds(new LatLng(55.919581, -3.314071), new LatLng(55.992527, -3.097852)), 0));
             }
         });
 

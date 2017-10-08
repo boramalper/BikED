@@ -45,7 +45,7 @@
                 app:cardUseCompatPadding="true"
                 app:contentPaddingBottom="@dimen/activity_vertical_margin"
                 app:contentPaddingLeft="5dp"
-                app:contentPaddingRight="@dimen/activity_horizontal_margin"
+                app:contentPaddingRight="5dp"
                 app:contentPaddingTop="5dp">
 
                 <LinearLayout
@@ -154,7 +154,7 @@
                 app:cardUseCompatPadding="true"
                 app:contentPaddingBottom="@dimen/activity_vertical_margin"
                 app:contentPaddingLeft="5dp"
-                app:contentPaddingRight="@dimen/activity_horizontal_margin"
+                app:contentPaddingRight="5dp"
                 app:contentPaddingTop="5dp">
 
                 <LinearLayout
@@ -317,7 +317,7 @@
                 app:cardUseCompatPadding="true"
                 app:contentPaddingBottom="@dimen/activity_vertical_margin"
                 app:contentPaddingLeft="5dp"
-                app:contentPaddingRight="@dimen/activity_horizontal_margin"
+                app:contentPaddingRight="5dp"
                 app:contentPaddingTop="5dp">
 
                 <LinearLayout
@@ -425,7 +425,7 @@
                 app:cardUseCompatPadding="true"
                 app:contentPaddingBottom="@dimen/activity_vertical_margin"
                 app:contentPaddingLeft="5dp"
-                app:contentPaddingRight="@dimen/activity_horizontal_margin"
+                app:contentPaddingRight="5dp"
                 app:contentPaddingTop="5dp">
 
                 <LinearLayout
@@ -588,7 +588,7 @@
                 app:cardUseCompatPadding="true"
                 app:contentPaddingBottom="@dimen/activity_vertical_margin"
                 app:contentPaddingLeft="5dp"
-                app:contentPaddingRight="@dimen/activity_horizontal_margin"
+                app:contentPaddingRight="5dp"
                 app:contentPaddingTop="5dp">
 
                 <LinearLayout

@@ -1,6 +1,7 @@
 package org.boramalper.labs.biked;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -76,5 +77,23 @@ public class ReservationActivity extends AppCompatActivity {
                 ).show();
             }
         });
+
+        findViewById(R.id.buttonProceed).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                proceedTo(ReservationDoneActivity.class, false);
+            }
+        });
+    }
+
+    private void proceedTo(Class<?> cls, boolean noAnimation) {
+        Intent intent = new Intent(this, cls);
+        if (noAnimation) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        }
+        startActivity(intent);
+        if (noAnimation) {
+            overridePendingTransition(0, 0);
+        }
     }
 }

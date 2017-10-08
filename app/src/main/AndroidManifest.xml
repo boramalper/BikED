@@ -56,7 +56,9 @@
         <activity
             android:name=".ReservationActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".DetailsActivity"></activity>
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".Navigation1Activity" />
+        <activity android:name=".ReservationDoneActivity"></activity>
     </application>
 
 </manifest>
