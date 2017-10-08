@@ -1,11 +1,13 @@
 package org.boramalper.labs.biked;
 
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 
 import java.util.Locale;
 
@@ -15,8 +17,10 @@ import java.util.Locale;
 
 public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.ViewHolder> {
     private Route[] routes;
+    private MainActivity mainActivity;
 
-    RoutesAdapter(Route[] routes) {
+    RoutesAdapter(MainActivity mainActivity, Route[] routes) {
+        this.mainActivity = mainActivity;
         this.routes = routes;
     }
 
@@ -38,6 +42,13 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.ViewHolder
         ((TextView) holder.itemView.findViewById(R.id.textViewTag1)).setText(routes[position].tags[0]);
         ((TextView) holder.itemView.findViewById(R.id.textViewTag2)).setText(routes[position].tags[1]);
         ((TextView) holder.itemView.findViewById(R.id.textViewTag3)).setText(routes[position].tags[2]);
+
+        holder.itemView.findViewById(R.id.buttonViewDetails).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                proceedTo(DetailsActivity.class, false);
+            }
+        });
     }
 
     @Override
@@ -51,6 +62,17 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
             cardView = itemView.findViewById(R.id.cardView);
+        }
+    }
+
+    private void proceedTo(Class<?> cls, boolean noAnimation) {
+        Intent intent = new Intent(mainActivity, cls);
+        if (noAnimation) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        }
+        mainActivity.startActivity(intent);
+        if (noAnimation) {
+            mainActivity.overridePendingTransition(0, 0);
         }
     }
 }

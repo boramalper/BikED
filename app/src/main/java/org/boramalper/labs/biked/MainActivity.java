@@ -5,15 +5,11 @@ import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -109,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        discreteScrollView.setAdapter(InfiniteScrollAdapter.wrap(new RoutesAdapter(routes)));
+        discreteScrollView.setAdapter(InfiniteScrollAdapter.wrap(new RoutesAdapter(this, routes)));
         discreteScrollView.setItemTransitionTimeMillis(200);
         discreteScrollView.setItemTransformer(new ScaleTransformer.Builder().setMinScale(0.8f).build());
 
@@ -124,6 +120,13 @@ public class MainActivity extends AppCompatActivity {
                     routePortobelloHolyrood.kmlLayer = new KmlLayer(googleMap, R.raw.portobello_holyrood, getApplicationContext());
                     routeInverleithStockbridge.kmlLayer = new KmlLayer(googleMap, R.raw.inverleith_stockbridge, getApplicationContext());
                     routeCrammond.kmlLayer = new KmlLayer(googleMap, R.raw.crammond, getApplicationContext());
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (java.lang.InterruptedException exc) {
+                        /* IGNORE */
+                    }
+
 
                     CameraUpdate camUpdate = CameraUpdateFactory.newLatLngBounds(new LatLngBounds(new LatLng(55.919581, -3.314071), new LatLng(55.992527, -3.097852)), 0);
                     googleMap.moveCamera(camUpdate);
@@ -155,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 
     private void proceedTo(Class<?> cls, boolean noAnimation) {
