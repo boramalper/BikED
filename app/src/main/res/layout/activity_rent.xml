@@ -163,7 +163,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/textView64"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Cycle Scotland"
@@ -175,7 +175,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/textView4623245"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -184,7 +184,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/textView6dfge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -193,7 +193,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/textViewfwagga8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="10am - 6pm" />
@@ -204,7 +204,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/textViewhgahjdhahkj7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -214,7 +214,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/textViewkljdhaggda9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -262,14 +262,14 @@
                             android:layout_height="match_parent" >
 
                             <TextView
-                                android:id="@+id/textView12"
+                                android:id="@+id/textView1hghfhd2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
                                 android:text="Electric: 5" />
 
                             <TextView
-                                android:id="@+id/textView10"
+                                android:id="@+id/textView1tytrte0"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
@@ -277,7 +277,7 @@
                                 android:textAlignment="textStart" />
 
                             <TextView
-                                android:id="@+id/textView13"
+                                android:id="@+id/textView1gcvx3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
@@ -293,7 +293,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/button2mnbfr"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -326,7 +326,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/textViewnbvfdds3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Grease Monkey Cycles"
@@ -338,7 +338,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/textViewwdxfcs4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -347,7 +347,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/textViewfxdfdfdf6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -356,7 +356,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/textViewhvghfd8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="9am - 5:30pm" />
@@ -367,7 +367,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/textViewrerw7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -377,7 +377,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/textViewgfdser9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -389,7 +389,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/textView1jhgfydtrere7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Unfortunately we don't have access to their inventory." />
@@ -400,14 +400,14 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/buttonhgfrrtsx2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Navigate" />
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/buttonbvfdrdf3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -434,7 +434,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/textViewhgfyttyf3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Leith Cycle Co."
@@ -446,7 +446,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/textViewtdrttrdf4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -455,7 +455,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/textViebhfrdttrtw6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -464,7 +464,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/textVihugyyttyew8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="9am - 5:30pm" />
@@ -475,7 +475,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/textVhghfdfgiew7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -485,7 +485,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/textutrtrdyftView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -505,14 +505,14 @@
                             android:layout_height="match_parent" >
 
                             <TextView
-                                android:id="@+id/textView12"
+                                android:id="@+id/texawfafvatView12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
                                 android:text="Trekking: 9" />
 
                             <TextView
-                                android:id="@+id/textView13"
+                                android:id="@+id/textwafafaxView13"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
@@ -520,7 +520,7 @@
                                 android:textAlignment="textStart" />
 
                             <TextView
-                                android:id="@+id/textView10"
+                                android:id="@+id/texfafafsawwtView10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
@@ -533,14 +533,14 @@
                             android:layout_height="match_parent" >
 
                             <TextView
-                                android:id="@+id/textView12"
+                                android:id="@+id/texxcasaftView12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
                                 android:text="Electric: 1" />
 
                             <TextView
-                                android:id="@+id/textView10"
+                                android:id="@+id/tedafxzqxtView10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
@@ -548,7 +548,7 @@
                                 android:textAlignment="textStart" />
 
                             <TextView
-                                android:id="@+id/textView13"
+                                android:id="@+id/texvgfgcahvhjtView13"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.33"
@@ -564,14 +564,14 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/butbhvgyfughton2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Navigate" />
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/buttnbvcgfdfgon3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -597,7 +597,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/textVikjsahyfwew3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Pedal Forth"
@@ -609,7 +609,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/texhtaydryfajhtView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -618,7 +618,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/tebvcgfdrextView6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -627,7 +627,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/textersdfgchhView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="9am - 5pm" />
@@ -638,7 +638,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/textuojnbvgfrView7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -648,7 +648,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/textedcgvcddView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -660,7 +660,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/textnbvcvbnhgfView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Unfortunately we don't have access to their inventory." />
@@ -671,14 +671,14 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/buttftfghhyton2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Navigate" />
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/buewseseawtton3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -706,7 +706,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/tawazqaextView3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Hart's Cyclery"
@@ -718,7 +718,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/texcvxdedtView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -727,7 +727,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/tegyfrtdrxtView6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -736,7 +736,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/tetftdtrdxtView8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="10am - 5pm" />
@@ -747,7 +747,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/textfdrserdfView7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -757,7 +757,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/texgftdresghfvgtView9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -769,7 +769,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/textView17"
+                        android:id="@+id/textxeregdfView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Unfortunately we don't have access to their inventory." />
@@ -780,14 +780,14 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/buttrtrdfgvbon2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Navigate" />
 
                         <Button
-                            android:id="@+id/button3"
+                            android:id="@+id/burtetycvtton3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

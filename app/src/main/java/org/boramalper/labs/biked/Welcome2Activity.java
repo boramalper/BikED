@@ -1,6 +1,7 @@
 package org.boramalper.labs.biked;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,14 @@ public class Welcome2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences settings = getSharedPreferences("firstTime", 0);
+
+        if (!settings.getBoolean("isFirstTime", true)) {
+            proceed();
+        } else {
+            settings.edit().putBoolean("isFirstTime", false).apply();
+        }
 
         // Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

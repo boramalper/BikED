@@ -99,7 +99,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="16dp"></View>
+                android:layout_height="32dp"></View>
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chartCO2"
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="You cycled 57.1 km in total within the past 7 days."
+                android:text="You saved 57.9 kg of CO2 in total within the past 7 days by cycling instead of driving a car."
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textSize="14dp" />

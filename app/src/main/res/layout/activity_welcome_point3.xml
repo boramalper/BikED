@@ -27,15 +27,17 @@
         android:layout_width="344dp"
         android:layout_height="448dp"
         app:cardBackgroundColor="@color/cardview_light_background"
+        app:cardElevation="7dp"
         app:cardMaxElevation="10dp"
+        app:cardUseCompatPadding="true"
         app:contentPadding="10dp"
         app:contentPaddingBottom="10dp"
         app:contentPaddingLeft="10dp"
         app:contentPaddingRight="10dp"
         app:contentPaddingTop="10dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/buttonWelcome3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -53,6 +55,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/cardview_dark_background"
                 android:textSize="25sp" />
+
             <ImageView
                 android:id="@+id/imageView52"
                 android:layout_width="match_parent"

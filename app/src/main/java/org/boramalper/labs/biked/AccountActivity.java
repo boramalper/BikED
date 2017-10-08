@@ -50,6 +50,10 @@ public class AccountActivity extends AppCompatActivity {
             }
         });
 
+        //////////////////////////////////////////////////////////
+        Description emptyDescription = new Description();
+        emptyDescription.setText("");
+
         List<BarEntry> datasetDistance = new ArrayList<>();
         datasetDistance.add(new BarEntry(2, 9.8f));
         datasetDistance.add(new BarEntry(3, 15.2f));
@@ -67,9 +71,7 @@ public class AccountActivity extends AppCompatActivity {
         BarData barDataDistance = new BarData(barDataSetDistance);
         barDataDistance.setValueTextSize(12);
 
-        Description description = new Description();
-        description.setText("");
-        chartDistance.setDescription(description);
+        chartDistance.setDescription(emptyDescription);
         chartDistance.setData(barDataDistance);
         chartDistance.invalidate();
         chartDistance.getXAxis().setTextSize(12);
@@ -79,6 +81,30 @@ public class AccountActivity extends AppCompatActivity {
 
         //////////////////////////////////////////////////////////
 
+        List<Entry> datasetCO2Car = new ArrayList<>();
+        datasetCO2Car.add(new Entry(2, 4.2f));
+        datasetCO2Car.add(new Entry(3, 16.7f));
+        datasetCO2Car.add(new Entry(4, 7.6f));
+        datasetCO2Car.add(new Entry(5, 8.2f));
+        datasetCO2Car.add(new Entry(6, 10.1f));
+        datasetCO2Car.add(new Entry(7, 7.8f));
+        datasetCO2Car.add(new Entry(8, 3.3f));
+
+        LineChart chartCO2 = findViewById(R.id.chartCO2);
+
+        LineDataSet lineDataSetCO2 = new LineDataSet(datasetCO2Car, "CO2 Car");
+        lineDataSetCO2.setColor(Color.parseColor("#3F51B5"));
+
+        LineData lineDataCO2 = new LineData(lineDataSetCO2);
+        lineDataCO2.setValueTextSize(12);
+
+        chartCO2.setDescription(emptyDescription);
+        chartCO2.setData(lineDataCO2);
+        chartCO2.invalidate();
+        chartCO2.getXAxis().setTextSize(12);
+        chartCO2.getAxisLeft().setDrawLabels(false);
+        chartCO2.getAxisRight().setDrawLabels(false);
+        chartCO2.getLegend().setEnabled(false);
     }
 
     private void proceedTo(Class<?> cls, boolean noAnimation) {
