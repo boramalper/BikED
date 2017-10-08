@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardView"
     android:layout_width="270dp"
-    android:layout_height="300dp"
+    android:layout_height="270dp"
     app:cardElevation="7dp"
     app:cardUseCompatPadding="true">
 
@@ -37,8 +36,8 @@
                 android:id="@+id/textViewLevel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="5dp"
+                android:layout_weight="1"
                 android:text="TextView"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -46,8 +45,8 @@
                 android:id="@+id/textViewLength"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginRight="5dp"
+                android:layout_weight="1"
                 android:text="TextView"
                 android:textAlignment="textEnd"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
@@ -99,18 +98,19 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:orientation="vertical" >
-        <Button
-            android:id="@+id/buttonViewDetails"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Details" />
-    </LinearLayout>
+            android:layout_height="0dip"
+            android:layout_weight="0.71"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonViewDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Details" />
+        </LinearLayout>
 
     </LinearLayout>
 </android.support.v7.widget.CardView>
