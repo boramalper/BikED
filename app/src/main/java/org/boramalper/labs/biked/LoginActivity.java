@@ -28,9 +28,11 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+
     private void proceed() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
 }
 

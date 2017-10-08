@@ -7,18 +7,18 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 android:layout_height="match_parent">
 
 <!-- Content Container -->
-<android.support.design.widget.BottomNavigationView
-    android:id="@+id/bottomNavigation"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    app:itemBackground="@color/colorPrimary"
-    app:itemIconTint="#FFFFFF"
-    app:itemTextColor="#FFFFFF"
-    app:menu="@menu/bottom_navigation_main"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintStart_toEndOf="parent"
-    tools:layout_editor_absoluteX="274dp" />
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_main"
+        tools:layout_editor_absoluteX="274dp" />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"

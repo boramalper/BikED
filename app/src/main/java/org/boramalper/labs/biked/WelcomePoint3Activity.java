@@ -17,7 +17,7 @@ public class WelcomePoint3Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_welcome_point3);
 
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonWelcome3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 proceed();
