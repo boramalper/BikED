@@ -74,7 +74,7 @@ public class Navigation1Activity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        proceedTo(RentActivity.class, true);
+        proceedTo(MainActivity.class, true);
     }
 
     protected MapView mMapView;

@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         final Route routeBlackfordMeadows = new Route(
                 "Blackford Hill & the Meadows",
                 "Blackford Hill\n&\nthe Meadows",
-                Color.parseColor("#4daf4a"),
+                Color.parseColor("#e41a1c"),
                 "Intermediate",
                 12.7f,
                 (new String[] {"Green", "Historic", "Nature"}),
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ), routeBotanicBritannia = new Route(
                 "Botanic Gardens & Royal Yacht Britannia",
                 "Botanic Gardens\n&\nRoyal Yacht Britannia",
-                Color.parseColor("#e41a1c"),
+                Color.parseColor("#4daf4a"),
                 "Easy",
                 15f,
                 (new String[] {"Historic", "Sea", "Green"}),
@@ -70,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 ""
         );
 
+        // BORA: DO __NOT__ CHANGE THE ORDER! See RoutesAdapter...
         final Route[] routes = {
                 routeBlackfordMeadows,
                 routeBotanicBritannia,
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         mMapView.onCreate(savedInstanceState);
         mMapView.getMapAsync(new OnMapReadyCallback() {
             @Override
-            public void onMapReady(GoogleMap googleMap) {
+            public void onMapReady(final GoogleMap googleMap) {
                 try {
                     routeBlackfordMeadows.kmlLayer = new KmlLayer(googleMap, R.raw.blackford_meadows, getApplicationContext());
                     routeBotanicBritannia.kmlLayer = new KmlLayer(googleMap, R.raw.botanic_britannia, getApplicationContext());
@@ -123,13 +123,12 @@ public class MainActivity extends AppCompatActivity {
                     /* IGNORE */
                 }
 
-                try {
-                    Thread.sleep(1000);
-                } catch (java.lang.InterruptedException exc) {
-                        /* IGNORE */
-                }
-
-                googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(new LatLngBounds(new LatLng(55.919581, -3.314071), new LatLng(55.992527, -3.097852)), 0));
+                googleMap.setOnMapLoadedCallback(new GoogleMap.OnMapLoadedCallback() {
+                    @Override
+                    public void onMapLoaded() {
+                        googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(new LatLngBounds(new LatLng(55.919581, -3.314071), new LatLng(55.992527, -3.097852)), 0));
+                    }
+                });
             }
         });
 

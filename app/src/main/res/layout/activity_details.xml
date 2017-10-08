@@ -53,7 +53,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
-                        android:background="#e41a1c"
+                        android:background="#4daf4a"
                         android:clickable="true"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"

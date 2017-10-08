@@ -1,6 +1,10 @@
 package org.boramalper.labs.biked;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.design.widget.BaseTransientBottomBar;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,7 +36,7 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         ((TextView) holder.itemView.findViewById(R.id.textViewTitle)).setText(routes[position].title);
         holder.itemView.findViewById(R.id.textViewTitle).setBackgroundColor(routes[position].titleColor);
 
@@ -46,7 +50,20 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.ViewHolder
         holder.itemView.findViewById(R.id.buttonViewDetails).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                proceedTo(DetailsActivity.class, false);
+                if (position == 1) {
+                    proceedTo(DetailsActivity.class, false);
+                } else {
+                    AlertDialog alertDialog = new AlertDialog.Builder(mainActivity).create();
+                    alertDialog.setTitle("Details Unavailable");
+                    alertDialog.setMessage("Please choose \"Botanic Gardens & Royal Yacht Britannia\"");
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.show();
+                }
             }
         });
     }

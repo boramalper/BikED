@@ -1,11 +1,28 @@
 package org.boramalper.labs.biked;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.Chart;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.DefaultAxisValueFormatter;
+import com.github.mikephil.charting.utils.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AccountActivity extends AppCompatActivity {
 
@@ -32,6 +49,36 @@ public class AccountActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        List<BarEntry> datasetDistance = new ArrayList<>();
+        datasetDistance.add(new BarEntry(2, 9.8f));
+        datasetDistance.add(new BarEntry(3, 15.2f));
+        datasetDistance.add(new BarEntry(4, 5.1f));
+        datasetDistance.add(new BarEntry(5, 6.9f));
+        datasetDistance.add(new BarEntry(6, 9.6f));
+        datasetDistance.add(new BarEntry(7, 7.3f));
+        datasetDistance.add(new BarEntry(8, 3.2f));
+
+        BarChart chartDistance = findViewById(R.id.chartDistance);
+
+        BarDataSet barDataSetDistance = new BarDataSet(datasetDistance, "Distance");
+        barDataSetDistance.setColor(Color.parseColor("#3F51B5"));
+
+        BarData barDataDistance = new BarData(barDataSetDistance);
+        barDataDistance.setValueTextSize(12);
+
+        Description description = new Description();
+        description.setText("");
+        chartDistance.setDescription(description);
+        chartDistance.setData(barDataDistance);
+        chartDistance.invalidate();
+        chartDistance.getXAxis().setTextSize(12);
+        chartDistance.getAxisLeft().setDrawLabels(false);
+        chartDistance.getAxisRight().setDrawLabels(false);
+        chartDistance.getLegend().setEnabled(false);
+
+        //////////////////////////////////////////////////////////
+
     }
 
     private void proceedTo(Class<?> cls, boolean noAnimation) {

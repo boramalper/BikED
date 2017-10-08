@@ -1,9 +1,10 @@
 package org.boramalper.labs.biked;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.widget.ExploreByTouchHelper;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -37,6 +38,24 @@ public class DetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 proceedTo(RentActivity.class, false);
+            }
+        });
+
+        final DetailsActivity detailsActivity = this;
+        findViewById(R.id.buttonNavigate).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog alertDialog = new AlertDialog.Builder(detailsActivity).create();
+                alertDialog.setTitle("Incomplete");
+                alertDialog.setMessage("We'll navigate you instead to a bike rental for demonstration purposes.");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                proceedTo(Navigation1Activity.class, false);
+                            }
+                        });
+                alertDialog.show();
             }
         });
     }
