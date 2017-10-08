@@ -1,5 +1,7 @@
 package org.boramalper.labs.biked;
 
+import com.google.maps.android.data.kml.KmlLayer;
+
 /**
  * Created by bora on 07.10.2017.
  */
@@ -9,6 +11,7 @@ class Route {
     public String[] tags;
     public float length;
     public int titleColor;
+    public KmlLayer kmlLayer;
 
     // title is name stylised!
 
@@ -20,6 +23,6 @@ class Route {
         this.length = length;
         this.tags = tags;
         this.description = description;
-
+        this.kmlLayer = null;
     }
 }
