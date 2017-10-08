@@ -1,33 +1,27 @@
 package org.boramalper.labs.biked;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
-import android.view.View.OnClickListener;
-import android.widget.TextView;
+import android.view.ViewGroup;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.maps.android.data.kml.KmlLayer;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
 
 public class MainActivity extends AppCompatActivity {
-
-    private ImageView image;
-    private TextView button1;
-    private TextView button2;
-    private TextView button3;
-    private TextView button4;
-    private TextView button5;
-
-    int[] images = {R.drawable.route1, R.drawable.route2, R.drawable.route3, R.drawable.route4, R.drawable.route5 };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,32 +76,29 @@ public class MainActivity extends AppCompatActivity {
         };
 
         // <BORA ADDED THIS>
-        DiscreteScrollView discreteScrollView = (DiscreteScrollView) findViewById(R.id.discreteScrollView);
+        DiscreteScrollView discreteScrollView = findViewById(R.id.discreteScrollView);
         // TODO: discreteScrollView.addOnItemChangedListener();
         discreteScrollView.setAdapter(InfiniteScrollAdapter.wrap(new RoutesAdapter(routes)));
         discreteScrollView.setItemTransitionTimeMillis(200);
         discreteScrollView.setItemTransformer(new ScaleTransformer.Builder().setMinScale(0.8f).build());
-
         // </BORA ADDED THIS>
 
-        image = (ImageView)findViewById(R.id.imageView1);
+        // <BORA ADDED THAT>
+        mMapView = (MapView) findViewById(R.id.mapView);
+        mMapView.onCreate(savedInstanceState);
+        mMapView.getMapAsync(new OnMapReadyCallback() {
+            @Override
+            public void onMapReady(GoogleMap googleMap) {
+                try {
+                    KmlLayer layer = new KmlLayer(googleMap, R.raw.blackford_meadows, getApplicationContext());
+                    layer.addLayerToMap();
+                } catch (org.xmlpull.v1.XmlPullParserException | java.io.IOException exc) {
+                    /* IGNORE */
+                }
+            }
+        });
+        // </BORA ADDED THAT>
 
-        /*
-        button1= (TextView) findViewById(R.id.route1Text);
-        button1.setOnClickListener(button1Listener);
-
-        button2= (TextView) findViewById(R.id.route2Text);
-        button2.setOnClickListener(button2Listener);
-
-        button3= (TextView) findViewById(R.id.route3Text);
-        button3.setOnClickListener(button3Listener);
-
-        button4= (TextView) findViewById(R.id.route4Text);
-        button4.setOnClickListener(button4Listener);
-
-        button5= (TextView) findViewById(R.id.route5Text);
-        button5.setOnClickListener(button5Listener);
-        */
 
         BottomNavigationView bottomNavigation = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         bottomNavigation.setSelectedItemId(R.id.action_explore);
@@ -130,41 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    View.OnClickListener button1Listener = new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            image.setImageResource(images[0]);
-        }
-    };
-
-    View.OnClickListener button2Listener = new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            image.setImageResource(images[1]);
-        }
-    };
-
-    View.OnClickListener button3Listener = new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            image.setImageResource(images[2]);
-        }
-    };
-
-    View.OnClickListener button4Listener = new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            image.setImageResource(images[3]);
-        }
-    };
-
-    View.OnClickListener button5Listener = new OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            image.setImageResource(images[4]);
-        }
-    };
-
     private void proceedTo(Class<?> cls, boolean noAnimation) {
         Intent intent = new Intent(this, cls);
         if (noAnimation) {
@@ -181,5 +137,51 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         // Disable back button travelling between Rent, Explore, and Account activities
         // (maintain the illusion!)
+    }
+
+    protected MapView mMapView;
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mMapView != null) {
+            mMapView.onResume();
+        }
+    }
+
+    @Override
+    public void onPause() {
+        if (mMapView != null) {
+            mMapView.onPause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mMapView != null) {
+            try {
+                mMapView.onDestroy();
+            } catch (NullPointerException e) {
+                Log.e("BIKED", "Error while attempting MapView.onDestroy(), ignoring exception", e);
+            }
+        }
+        super.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        if (mMapView != null) {
+            mMapView.onLowMemory();
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (mMapView != null) {
+            mMapView.onSaveInstanceState(outState);
+        }
     }
 }
