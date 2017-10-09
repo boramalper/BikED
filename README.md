@@ -12,24 +12,35 @@ BikED the App
 -------------
 The mobile (Android) app allows users to explore the catalogue of cycling routes, categorised by their difficulty and tagged by the experience they offer, using the interactive map at the top..:
 
-![media/routes.gif](media/routes.gif)
+<p align="center">
+  <img src="media/routes.gif" />
+</p>
 
 ...and read the description of a route they are insterested in and view its photos:
 
-![media/description.gif](media/description.gif)
+<p align="center">
+  <img src="media/description.gif" />
+</p>
 
 Users, if they still don't have a bicycle, can see the list of nearest bike rentals using the app..:
 
-![media/rentals.png](media/rentals.png)
+<p align="center">
+  <img src="media/rentals.png" />
+</p>
 
 ...and even make a reservation right away, which -at the comfort of the user- can even be delievered to his/her door:
 
-![media/reservation.png](media/reservation.png)
+<p align="center">
+  <img src="media/reservation.png" />
+</p>
 
 Lastly, users can see the statistics about themselves, such as how many kilometres have they cycled so far, and how many
 grammes of CO2 have they saved by not taking a car or bus:
 
-![media/statistics.png](media/statistics.png)
+<p align="center">
+  <img src="media/statistics.png" />
+</p>
+
 
 License
 -------
