@@ -33,5 +33,6 @@ grammes of CO2 have they saved by not taking a car or bus:
 
 License
 -------
-Copyright (C) 2017  Mert Bora ALPER <bora@boramalper.org>, Sean Mullan <seanmullan97@outlook.com>, Alex Baille <asgbaillie@gmail.com>, Elena Musiol <elena_ml@hotmail.de>.
+Copyright (C) 2017  [Mert Bora ALPER](mailto:bora@boramalper.org), [Sean MULLAN](mailto:seanmullan97@outlook.com), [Alex BAILLIE](mailto:asgbaillie@gmail.com), [Elena MUSIOL](mailto:elena_ml@hotmail.de)
+
 All rights reserved.
